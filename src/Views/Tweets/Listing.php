@@ -28,16 +28,16 @@ class Listing
             <div class="panel panel-default">
                 <div class="panel-body">
                     <div class="row">
-                        <a class="col-xs-3" href="/web/<?= $userId ?>" title="<?= $userName ?>" tabindex="-1" aria-hidden="true" rel="noopener">
-                            <img alt="@<?= $userId ?> avatar" class="img-rounded" src="/img/<?= $userId ?>">
+                        <a class="col-xs-3" href="/<?= $userId ?>" title="<?= $userName ?>" tabindex="-1" aria-hidden="true" rel="noopener">
+                            <img alt="@<?= $userId ?> avatar" class="img-rounded" src="/web/img/<?= $userId ?>">
                         </a>
 
                         <div class="col-xs-9">
                             <div>
-                                <a href="/web/<?= $userId ?>" rel="noopener"><strong class="fullname"><?= $userName ?></strong></a>
+                                <a href="/<?= $userId ?>" rel="noopener"><strong class="fullname"><?= $userName ?></strong></a>
                             </div>
                             <span dir="ltr">
-                                <a href="/web/<?= $userId ?>" rel="noopener">@<span><?= $userId ?></span></a>
+                                <a href="/<?= $userId ?>" rel="noopener">@<span><?= $userId ?></span></a>
                             </span>
                         </div>
                     </div>
@@ -65,11 +65,11 @@ class Listing
                         ?>
                         <div class="media">
                             <a class="media-left" href="/<?= $userId ?>">
-                                <img alt="@<?= $userId ?> avatar" class="img-rounded" src="/img/<?= $userId ?>">
+                                <img alt="@<?= $userId ?> avatar" class="img-rounded" src="/web/img/<?= $userId ?>">
                             </a>
                             <div class="media-body">
-                                <a href="/web/<?= $userId ?>"><strong class="fullname"><?= $userName ?></strong></a>
-                                <a href="/web/<?= $userId ?>">@<?= $userId ?></a> <small class="time"><a href="/<?= "$userId/status/" . htmlspecialchars($tweet->id) ?>"><?= $tweet->ts ?></a></small>
+                                <a href="/<?= $userId ?>"><strong class="fullname"><?= $userName ?></strong></a>
+                                <a href="/<?= $userId ?>">@<?= $userId ?></a> <small class="time"><a href="/<?= "$userId/status/" . htmlspecialchars($tweet->id) ?>"><?= $tweet->ts ?></a></small>
                                 <p><?= htmlspecialchars($tweet->message) ?></p>
                             </div>
                         </div>

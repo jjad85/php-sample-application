@@ -26,11 +26,11 @@ class Listing
                         $userId = htmlspecialchars($user->id);
                         ?>
                         <div class="media">
-                            <a class="media-left" href="/web/<?= $userId ?>">
+                            <a class="media-left" href="/<?= $userId ?>">
                                 <img alt="@<?= $userId ?> avatar" class="img-rounded" src="/web/img/<?= $userId ?>">
                             </a>
                             <div class="media-body">
-                                <p><a href="/web/<?= $userId ?>"><strong class="fullname"><?= $user->name ?></strong></a> <a href="/web/<?= $userId ?>">@<?= $userId ?></a></p>
+                                <p><a href="/<?= $userId ?>"><strong class="fullname"><?= $user->name ?></strong></a> <a href="/<?= $userId ?>">@<?= $userId ?></a></p>
                                 <small>joined <span class="time"><?= $user->joined ?></span></small>
                             </div>
                         </div>
