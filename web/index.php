@@ -1,8 +1,9 @@
 <?php
+require __DIR__ . '/../vendor/autoload.php';
+ini_set('display_errors', 1);
+$lastJoinedUsers = (require "../dic/users.php")->getLastJoined();
 
-$lastJoinedUsers = (require "dic/users.php")->getLastJoined();
-
-switch (require "dic/negotiated_format.php") {
+switch (require "../dic/negotiated_format.php") {
     case "text/html":
         (new Views\Layout(
             "Twitter - Newcomers", new Views\Users\Listing($lastJoinedUsers), true

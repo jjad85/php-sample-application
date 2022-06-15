@@ -2,6 +2,8 @@
 
 namespace Views\Tweets;
 
+ini_set('display_errors', 1);
+
 use Entity\Tweet;
 use Entity\User;
 
@@ -27,12 +29,12 @@ class Page
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="media">
-                            <a class="media-left" href="/<?= $userId ?>">
-                                <img alt="@<?= $userId ?> avatar" class="img-rounded" src="/img/<?= $userId ?>">
+                            <a class="media-left" href="/web/<?= $userId ?>">
+                                <img alt="@<?= $userId ?> avatar" class="img-rounded" src="/web/img/<?= $userId ?>">
                             </a>
                             <div class="media-body">
-                                <a href="/<?= $userId ?>"><strong class="fullname"><?= $userName ?></strong></a>
-                                <a href="/<?= $userId ?>">@<?= $userId ?></a> <small class="time"><a href="/<?= "$userId/status/" . htmlspecialchars($this->tweet->id) ?>"><?= $this->tweet->ts ?></a></small>
+                                <a href="/web/<?= $userId ?>"><strong class="fullname"><?= $userName ?></strong></a>
+                                <a href="/web/<?= $userId ?>">@<?= $userId ?></a> <small class="time"><a href="/web/<?= "$userId/status/" . htmlspecialchars($this->tweet->id) ?>"><?= $this->tweet->ts ?></a></small>
                                 <p><?= htmlspecialchars($this->tweet->message) ?></p>
                             </div>
                         </div>

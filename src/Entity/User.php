@@ -2,6 +2,8 @@
 
 namespace Entity;
 
+ini_set('display_errors', 1);
+
 class User
 {
     public $id;

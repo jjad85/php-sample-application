@@ -1,6 +1,8 @@
 <?php
 
-$tweet = (require "dic/tweets.php")->getById($_GET["id"]);
+ini_set('display_errors', 1);
+
+$tweet = (require "../dic/tweets.php")->getById($_GET["id"]);
 
 if ($tweet === null) {
     http_response_code(404);
@@ -10,16 +12,16 @@ if ($tweet === null) {
 if ($tweet->userId !== $_GET["user"]) {
     // Redirect to the correct URL, this is the case if the user has been manually modified
     http_response_code(301);
-    header("Location: /$tweet->userId/status/$_GET[id]");
+    header("Location: /web/$tweet->userId/status/$_GET[id]");
     exit;
 }
 
-switch (require "dic/negotiated_format.php") {
+switch (require "../dic/negotiated_format.php") {
     case "text/html":
         (new Views\Layout(
             "@$_GET[user] - \"$tweet->message\"",
             new Views\Tweets\Page(
-                (require "dic/users.php")->getById($_GET["user"]),
+                (require "../dic/users.php")->getById($_GET["user"]),
                 $tweet
             )
         ))();

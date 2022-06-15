@@ -2,6 +2,8 @@
 
 namespace Views\Tweets;
 
+ini_set('display_errors', 1);
+
 use Entity\User;
 
 class Listing
@@ -26,16 +28,16 @@ class Listing
             <div class="panel panel-default">
                 <div class="panel-body">
                     <div class="row">
-                        <a class="col-xs-3" href="/<?= $userId ?>" title="<?= $userName ?>" tabindex="-1" aria-hidden="true" rel="noopener">
+                        <a class="col-xs-3" href="/web/<?= $userId ?>" title="<?= $userName ?>" tabindex="-1" aria-hidden="true" rel="noopener">
                             <img alt="@<?= $userId ?> avatar" class="img-rounded" src="/img/<?= $userId ?>">
                         </a>
 
                         <div class="col-xs-9">
                             <div>
-                                <a href="/<?= $userId ?>" rel="noopener"><strong class="fullname"><?= $userName ?></strong></a>
+                                <a href="/web/<?= $userId ?>" rel="noopener"><strong class="fullname"><?= $userName ?></strong></a>
                             </div>
                             <span dir="ltr">
-                                <a href="/<?= $userId ?>" rel="noopener">@<span><?= $userId ?></span></a>
+                                <a href="/web/<?= $userId ?>" rel="noopener">@<span><?= $userId ?></span></a>
                             </span>
                         </div>
                     </div>
@@ -66,8 +68,8 @@ class Listing
                                 <img alt="@<?= $userId ?> avatar" class="img-rounded" src="/img/<?= $userId ?>">
                             </a>
                             <div class="media-body">
-                                <a href="/<?= $userId ?>"><strong class="fullname"><?= $userName ?></strong></a>
-                                <a href="/<?= $userId ?>">@<?= $userId ?></a> <small class="time"><a href="/<?= "$userId/status/" . htmlspecialchars($tweet->id) ?>"><?= $tweet->ts ?></a></small>
+                                <a href="/web/<?= $userId ?>"><strong class="fullname"><?= $userName ?></strong></a>
+                                <a href="/web/<?= $userId ?>">@<?= $userId ?></a> <small class="time"><a href="/<?= "$userId/status/" . htmlspecialchars($tweet->id) ?>"><?= $tweet->ts ?></a></small>
                                 <p><?= htmlspecialchars($tweet->message) ?></p>
                             </div>
                         </div>
