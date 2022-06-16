@@ -1,5 +1,6 @@
 #!/bin/sh
 
+cd ../..
 chmod 775 Makefile
 ./Makefile
 ./composer.phar install
