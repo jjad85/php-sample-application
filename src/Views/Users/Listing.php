@@ -27,7 +27,7 @@ class Listing
                         ?>
                         <div class="media">
                             <a class="media-left" href="/<?= $userId ?>">
-                                <img alt="@<?= $userId ?> avatar" class="img-rounded" src="/web/img/<?= $userId ?>">
+                                <img alt="@<?= $userId ?> avatar" class="img-rounded" src="/img/<?= $userId ?>">
                             </a>
                             <div class="media-body">
                                 <p><a href="/<?= $userId ?>"><strong class="fullname"><?= $user->name ?></strong></a> <a href="/<?= $userId ?>">@<?= $userId ?></a></p>

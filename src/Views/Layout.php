@@ -25,8 +25,8 @@ class Layout
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet prefetch" href="/web/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/web/css/twitter.css">
+  <link rel="stylesheet prefetch" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/twitter.css">
 
   <title><?= htmlspecialchars($this->title) ?></title>
 </head>
@@ -37,7 +37,7 @@ class Layout
         <div class="navbar-collapse navbar-collapse-1 collapse" aria-expanded="true">
             <ul class="nav navbar-nav">
                 <li<?php if ($this->homeActive) echo ' class="active"' ?>>
-                    <a href="/web/"><span class="glyphicon glyphicon-home"></span> Home</a>
+                    <a href="/"><span class="glyphicon glyphicon-home"></span> Home</a>
                 </li>
             </ul>
         </div>

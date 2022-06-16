@@ -29,7 +29,7 @@ class Listing
                 <div class="panel-body">
                     <div class="row">
                         <a class="col-xs-3" href="/<?= $userId ?>" title="<?= $userName ?>" tabindex="-1" aria-hidden="true" rel="noopener">
-                            <img alt="@<?= $userId ?> avatar" class="img-rounded" src="/web/img/<?= $userId ?>">
+                            <img alt="@<?= $userId ?> avatar" class="img-rounded" src="/img/<?= $userId ?>">
                         </a>
 
                         <div class="col-xs-9">
@@ -65,7 +65,7 @@ class Listing
                         ?>
                         <div class="media">
                             <a class="media-left" href="/<?= $userId ?>">
-                                <img alt="@<?= $userId ?> avatar" class="img-rounded" src="/web/img/<?= $userId ?>">
+                                <img alt="@<?= $userId ?> avatar" class="img-rounded" src="/img/<?= $userId ?>">
                             </a>
                             <div class="media-body">
                                 <a href="/<?= $userId ?>"><strong class="fullname"><?= $userName ?></strong></a>

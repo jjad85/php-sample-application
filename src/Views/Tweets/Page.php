@@ -30,7 +30,7 @@ class Page
                     <div class="modal-body">
                         <div class="media">
                             <a class="media-left" href="/<?= $userId ?>">
-                                <img alt="@<?= $userId ?> avatar" class="img-rounded" src="/web/img/<?= $userId ?>">
+                                <img alt="@<?= $userId ?> avatar" class="img-rounded" src="/img/<?= $userId ?>">
                             </a>
                             <div class="media-body">
                                 <a href="/<?= $userId ?>"><strong class="fullname"><?= $userName ?></strong></a>

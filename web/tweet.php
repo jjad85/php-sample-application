@@ -12,7 +12,7 @@ if ($tweet === null) {
 if ($tweet->userId !== $_GET["user"]) {
     // Redirect to the correct URL, this is the case if the user has been manually modified
     http_response_code(301);
-    header("Location: /web/$tweet->userId/status/$_GET[id]");
+    header("Location: /$tweet->userId/status/$_GET[id]");
     exit;
 }
 
