@@ -21,7 +21,7 @@ services:
     volumes:
       - ./website:/var/www/html
     ports:
-      - "90:80"
+      - "80:80"
     links:
       - databasecx
 

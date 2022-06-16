@@ -1,11 +1,3 @@
-CREATE DATABASE sample;
-CREATE USER 'sampleuser'@localhost IDENTIFIED BY 'samplepass';
-GRANT USAGE ON *.* TO 'sampleuser'@localhost IDENTIFIED BY 'samplepass';
-GRANT USAGE ON *.* TO 'sampleuser'@'%' IDENTIFIED BY 'samplepass';
-GRANT ALL ON `sample`.* TO 'sampleuser'@localhost;
-GRANT ALL PRIVILEGES ON *.* TO 'sampleuser'@'%' WITH GRANT OPTION;
-FLUSH PRIVILEGES;
-
 use sample; 
 
 DROP FUNCTION IF EXISTS `ordered_uuid`;
