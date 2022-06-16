@@ -19,7 +19,7 @@ services:
       - databasecx
     image: php:7.2-apache
     volumes:
-      - ./../website:/var/www/html
+      - ./../:/var/www/html
     ports:
       - "80:80"
     links:
